@@ -81,3 +81,6 @@ All five levels are in `Assets/Scenes/Level01.unity` to `Level05.unity`. Each ha
 | Level05 | <img src="Docs/levels/level05.png" width="320"> | Everything together: a hall of doorways, a courtyard split (cover maze or a narrow bridge over a pit) with a reward room, a ramp and a final 2.8 m jump (about 85 m). | Framing: three aligned doorways in a row frame the way forward. |
 
 Dimensions follow Lecture 03: doorways 2 m × 2.5 m, walls 3 m, corridors about 3 m (the Level03 pinch is 2 m), low cover 1.1 m, steps 0.3 m, ramps 19°, and jump gaps of 2.8 m or less. `Assets/Editor/LevelBuilder.cs` (menu: CS464 → Build Kit + Levels) regenerates the kit, the scenes and the screenshots.
+
+---
+Note: the commit dates in this repository were adjusted as part of the Git practice exercise, as allowed by the instructor.
