@@ -4,7 +4,7 @@
 
 - **Store link:** [Google Play](https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf)
 - **Genre:** Endless runner
-- **I played:** over 30 minutes across many runs, well past the tutorial: I unlocked the Jetpack, collected event items and rewards, and finished with a coin balance of 12,162.
+- **I played:** more than 30 minutes over a few sessions, and I got well past the tutorial. I ran many times, collected coins and tried the power-ups.
 - **Video (optional):** none
 
 <p>
@@ -14,33 +14,33 @@
 <img src="Docs/game1/4.jpg" width="200">
 </p>
 
-1. [M2, M4, M6, M7] · The Inspector and his dog are right behind me after a stumble against a train, the score shows ×2 with 003137, 156 coins are collected, the "Top Run" marker shows 21863, and the event counter reads 1/5.
-2. [M3] · A "Double Prize" reward screen pays out a 2,000-coin sack, taking my balance to 12,162.
-3. [M1, M2, M7] · I am caught by the Inspector while a train and barriers block the lane ahead; coins sit in the lane next to the chase and the Top Run marker reads 22071.
-4. [M5, M3] · Jetpack active over the tracks: coins float above the trains and a bar at the bottom shows how long the Jetpack has left.
+1. [M2, M4, M6, M7] · I hit a train and now the guard and his dog are chasing me. The score, coins and top run box are at the top right, and there is an event counter at the top left.
+2. [M3] · A reward screen gives me a bag of coins.
+3. [M1, M2] · Running down the track with the guard right behind me and a train coming in my lane.
+4. [M5, M3] · Using the jetpack. I'm flying over the track and picking up coins from above.
 
 | # | Mechanic | Dynamic | Aesthetic | Bartle type |
 |---|---|---|---|---|
-| M1 | The track has three lanes. A swipe left or right changes lane, up jumps, down rolls under a barrier. | Players read the next obstacles a second ahead, weave between lanes and jump only when a train blocks the lane, so they keep scanning the screen instead of looking at the score. | Challenge: every second asks for a new quick decision, and surviving it feels earned. | Achiever (acting × world): mastering the controls to run further. |
-| M2 | Hitting an obstacle once makes the runner stumble and lets the Inspector and his dog catch up. A second hit while they are close ends the run. | Players who stumble play very carefully for the next few seconds to let the Inspector fall back, and treat the stumble as a last warning. | Challenge: there is a clear cost for a mistake, and a recovery after one makes the run feel tense. | Achiever (acting × world): the game's own fail state is the opponent. |
-| M3 | Coins collected on the track are the currency. They are spent in the shop on characters, boards and upgrades, and special rewards such as the 2,000-coin sack add more. | Players steer toward coin lines even when it is slightly riskier, and keep playing "one more run" to afford the next unlock. | Expression: coins turn into a character and board of their own choice. | Achiever (acting × world): a shopping list of things to earn. |
-| M4 | The score is distance multiplied by a multiplier (×2 in my run) that grows as missions are completed. | Players pick up the missions that raise the multiplier first, because the same run then scores twice as much. | Challenge: the same run can be beaten by playing it smarter, not only longer. | Achiever (acting × world): numbers that keep going up. |
-| M5 | A Jetpack power-up lifts the runner above the track for a limited time, shown by a draining bar. | Players use the Jetpack to grab long coin lines in the air and to ride over a dense train section that they would otherwise fail. | Sensation: flying above the city with a colourful trail. | Explorer (interacting × world): learning what each power-up does and when to use it. |
-| M6 | A "Top Run" marker shows the best score from the leaderboard, which the player is trying to pass during the run. | Players watch the marker and push to pass it before a run ends, taking more risk when the gap is small. | Challenge: there is a concrete target score to beat. | Killer (acting × players): the goal is to beat another player's score. |
-| M7 | An event counter (1/5) fills as seasonal items are collected in a run, and a reward unlocks when it is full. | Players change their route to pick up the event items, and return the next day to finish the set. | Discovery: finding what the current event gives in the next reward. | Explorer (interacting × world): uncovering the event content. |
+| M1 | You swipe left or right to change lane, up to jump and down to roll. | Players look ahead and change lane early to dodge trains and barriers. | Challenge: you need quick reactions all the time. | Achiever (acting × world): you get better at the controls so you can run further. |
+| M2 | If you crash once you stumble and the guard catches up. If you crash again soon after, the run ends. | After the first crash players play very carefully until the guard falls back. | Challenge: one mistake is forgiven but the next one ends the run, so it feels tense. | Achiever (acting × world): the game's own obstacles are what you play against. |
+| M3 | You collect coins on the track and spend them in the shop on characters, boards and upgrades. | Players go for coins, even in risky spots, and play one more run to afford the next thing. | Expression: coins let you choose how your character looks. | Achiever (acting × world): there is always something to save up for. |
+| M4 | Your score goes up with the distance you run, and it is multiplied by a number that you raise by finishing missions. | Players do the missions that raise the multiplier first so their next run scores more. | Challenge: you beat your old score by playing better, not only longer. | Achiever (acting × world): the number keeps growing. |
+| M5 | Power-ups like the jetpack lift you above the track for a short time. | Players use them to grab lines of coins in the air and skip hard parts of the track. | Sensation: flying over the city feels good. | Explorer (interacting × world): you find out what each power-up does and when it helps. |
+| M6 | A "top run" box shows a score from the leaderboard that you try to pass. | Players push harder when they get close to that score. | Challenge: there is a clear score to beat. | Achiever (acting × world): you are trying to beat a number. |
+| M7 | Event items that you pick up during runs fill a counter and give a reward when it is full. | Players change their route to pick up the items and come back on other days to finish. | Discovery: you want to find out what the event reward is. | Explorer (interacting × world): you go and look for what the event offers. |
 
-**Aesthetic profile:** Challenge leads (M1, M2, M4, M6): every few seconds there is a decision that can end the run. Expression (M3) and Sensation (M5) give the reason to keep coming back: a new look for the runner and the speed of the Jetpack.
+**Aesthetic profile:** Challenge is the main one (M1, M2, M4, M6) because every few seconds you can lose the run. Expression (M3) and Sensation (M5) come next. They are the reasons I kept playing: new looks for the character and the jetpack.
 
 **Player types**
-- Primary: Achiever (acting × world), because the whole loop is about beating the game's own numbers: lanes and obstacles (M1), the fail state (M2), coins to spend (M3) and the multiplier (M4).
-- Secondary: Explorer (interacting × world), because power-ups (M5) and event items (M7) reward trying out what the game offers; the Top Run marker (M6) also adds a small Killer element.
+- Primary: Achiever (acting × world), because I'm always pushing for a better result: running further, getting more coins and a higher score (M1, M3, M4). That is acting on the game. It is the world axis because what I play against is the game itself, with its obstacles and numbers (M2), not other players.
+- Secondary: Explorer (interacting × world), because power-ups and event items (M5, M7) are things I try out to see how they work. That is interacting with the game, and again it is the world axis because it is all part of the game system.
 
 ## Game 2 · PUBG Mobile (Team Deathmatch)
 
 - **Store link:** [Google Play](https://play.google.com/store/apps/details?id=com.tencent.ig)
-- **Genre:** Battle-royale shooter, played here in the Team Deathmatch mode
-- **I played:** over 30 minutes of Team Deathmatch matches on the warehouse map, with a squad of four; the screenshots are from one match that was still being played at 20–27 with a goal of 40.
-- **Video (optional):** none
+- **Genre:** Battle royale shooter. I played the Team Deathmatch mode.
+- **I played:** several Team Deathmatch matches with a squad, more than 30 minutes in total.
+- **Video (optional):** [Gameplay video on Google Drive](https://drive.google.com/file/d/1y0W_UMxk9EDx2N6BEBmI4L2l0xynUpi4/view?usp=sharing)
 
 <p>
 <img src="Docs/game2/1.jpg" width="320">
@@ -48,39 +48,39 @@
 <img src="Docs/game2/3.jpg" width="320">
 </p>
 
-1. [M1, M3, M4, M5, M7] · Team Deathmatch goal of 40 with a 7–17 score and a countdown timer, my AK with 40/120 ammo, the on-screen controls, my three teammates listed top left and the minimap top right.
-2. [M2, M3, M6] · A kill banner and the "Counterattack" and "Terminator" medals after I beat an enemy that was on top of a container; the score is 20–27.
-3. [M4, M5, M7] · I look at the mountains while the full map is open: the central building, the containers and my squad's positions are shown with numbered markers.
+1. [M1, M3, M4, M5, M7] · A Team Deathmatch match. The score and timer are at the top, my gun is at the bottom left, the control buttons are on the right and the minimap is at the top right. My teammates are listed on the left.
+2. [M2, M6] · A kill and a medal popup on screen while we fight around the containers.
+3. [M5, M7] · The big map is open and my squad shows up as numbered markers.
 
 | # | Mechanic | Dynamic | Aesthetic | Bartle type |
 |---|---|---|---|---|
-| M1 | Team Deathmatch ends when a team reaches 40 kills (the "Goal: 40") or when the match timer runs out. | Teams stay on the move around the central building instead of hiding, because only kills count, and the team that is behind takes more risks as the timer gets short. | Challenge: a clear target and a deadline to beat. | Killer (acting × players): the goal is to defeat the other team. |
-| M2 | A player who is killed respawns and comes back into the fight, and no loot or place is lost. | Players take risky pushes and re-fight the same spot straight away, because dying costs only a few seconds. | Challenge: a fight can be lost without a heavy punishment, so players try bolder plays. | Killer (acting × players): repeated duels with the same enemies. |
-| M3 | Each weapon has a magazine and a reserve (for example 40/120) and must be reloaded when the magazine is empty. | Players duck behind a container to reload before moving on, and count bullets in a long fight. | Challenge: managing ammo is a skill that can decide a fight. | Achiever (acting × world): mastering the gun's rules. |
-| M4 | Touch controls: a left stick to move, a fire button, aim and scope buttons, plus buttons for jump, crouch and prone. | Players climb onto container roofs and ramps for a height advantage and switch between standing and crouching to fight on the same spot. | Sensation: aiming and moving with the screen feels like holding a gun. | Explorer (interacting × world): learning the map's routes and what each control allows. |
-| M5 | A squad of four on each side, with a teammate list, quick chat and map pings. | Teammates call out where the enemy is and move together to the same container instead of pushing alone. | Fellowship: the match is won together with the squad. | Socializer (interacting × players): playing with friends. |
-| M6 | Kill streaks and medals ("Counterattack", "Terminator") appear as a banner when a player earns them. | Players hunt for the player who last killed them to earn the counterattack medal, and brag about streaks in chat. | Challenge: the medal names a hard thing that the player has done. | Killer (acting × players): the reward is for beating a specific player. |
-| M7 | A minimap shows nearby teammates and a full map shows the whole arena with numbered squad markers. | Players check the map before choosing a flank, and use the markers to meet up and avoid walking into the enemy side. | Discovery: reading the map reveals where the fight is. | Explorer (interacting × world): understanding how the map is laid out. |
+| M1 | A Team Deathmatch match ends when one team reaches the kill target, or when the time runs out. | Teams fight over the middle instead of hiding, and the losing team takes bigger risks near the end. | Challenge: there is a clear goal and a time limit. | Killer (acting × players): you win by beating the other team. |
+| M2 | When you die you respawn and get back into the fight. | Players push again quickly and take more risks because dying costs very little. | Challenge: you can try bolder moves without a big punishment. | Killer (acting × players): you keep fighting the same enemies. |
+| M3 | Guns have limited ammo in the magazine and you have to reload. | Players hide behind cover to reload and try not to waste shots. | Challenge: managing your ammo can decide a fight. | Achiever (acting × world): you get better at using the gun properly. |
+| M4 | On the touch screen you move with a stick and use buttons to aim, shoot, jump, crouch and lie down. | Players climb on boxes and roofs to get height, and crouch or go prone behind cover. | Sensation: moving and shooting on the screen feels like handling a weapon. | Explorer (interacting × world): you learn what each move can do on the map. |
+| M5 | You play in a squad, so you can see your teammates, chat with them and mark places on the map. | Teammates call out enemies and attack the same spot together. | Fellowship: you win together as a team. | Socializer (interacting × players): you play with other people. |
+| M6 | The game shows medals and banners for things like kill streaks and revenge kills. | Players hunt the person who killed them to get a revenge medal and try to keep their streak going. | Challenge: a medal shows that you did something hard. | Killer (acting × players): the reward is for beating a specific player. |
+| M7 | A minimap and a full map show where your teammates are. | Players check the map before picking a route and meet up with their squad. | Discovery: reading the map shows you where the fight is. | Explorer (interacting × world): you work out how the map is laid out. |
 
-**Aesthetic profile:** Challenge leads (M1, M2, M3, M6): every fight can be lost, and the scoreboard is always close. Fellowship (M5) and Discovery (M7) support it: the squad plans together and reads the map before pushing.
+**Aesthetic profile:** Challenge is the biggest one (M1, M2, M3, M6) because every fight can be lost and the match is always close. Fellowship (M5) and Discovery (M7) come next: you plan with your squad and read the map before you push.
 
 **Player types**
-- Primary: Killer (acting × players), because the match is about defeating other players: the 40-kill goal (M1), repeated duels after respawn (M2) and the medals that reward beating a specific player (M6).
-- Secondary: Socializer (interacting × players), because the squad's chat, markers and teammate list (M5) are what make the matches worth playing with friends; the map (M7) also serves Explorers.
+- Primary: Killer (acting × players), because I'm doing something to the other side: shooting and winning fights (M1, M2). That is acting. It is the players axis because what I play against is the other team, not the game's system. The medals (M6) are also about beating a person.
+- Secondary: Socializer (interacting × players), because I play together with my squad, using chat, pings and the team list (M5). That is interacting, and it is the players axis because the fun comes from the other people. I also use the map (M7) to meet up with them.
 
 ## Level blockouts
 
-All five levels are in `Assets/Scenes/Level01.unity` to `Level05.unity`. Each has a 2 m × 1 m player capsule at the spawn, a green goal and a route of 30 m or more through at least two spaces and past a challenge. They use one prefab kit in `Assets/Prefabs/` (floor, wall, door wall, low cover, crate, pillar, step, ramp, landmark, strip, coin, light, spawn pad, goal, player) with flat colours only.
+All five levels are in `Assets/Scenes/` as `Level01.unity` to `Level05.unity`. Each one has a capsule player (2 m tall, 1 m wide) at the spawn, a green goal, and a route of at least 30 m through two or more spaces and past a challenge. They are built from one set of prefabs in `Assets/Prefabs/`, with flat colours only.
 
 | Level | Screenshot | Its idea | Wayfinding tool |
 |---|---|---|---|
-| Level01 | <img src="Docs/levels/level01.png" width="320"> | The basics: spawn room, corridor, a yard with low cover, then a 2.5 m jump to the goal (about 47 m). | Landmark: a tall orange tower stands behind the goal and is visible down the whole axis. |
-| Level02 | <img src="Docs/levels/level02.png" width="320"> | A split: a safe corridor on the left, or a shorter corridor with a 2.5 m gap on the right, then a hall with a reward side room and a 1.5 m wide bridge (about 68 m). | Breadcrumbs: a trail of coins leads along the safe route, through the hall and across the bridge. |
-| Level03 | <img src="Docs/levels/level03.png" width="320"> | A climb: a 2 m wide pinch leads into a big hall, and the goal sits on a platform 2.4 m up a 19° ramp (about 64 m). | Pinch and release: the narrow corridor opens into the hall and reveals the goal at once. |
-| Level04 | <img src="Docs/levels/level04.png" width="320"> | Height: two flights of stairs with 0.3 m steps, two 2.5 m jumps between platforms, and the goal 6 m up (about 62 m). | Light and contrast: a dark floor, with a pale strip and a warm light on each platform, and the brightest light on the goal. |
-| Level05 | <img src="Docs/levels/level05.png" width="320"> | Everything together: a hall of doorways, a courtyard split (cover maze or a narrow bridge over a pit) with a reward room, a ramp and a final 2.8 m jump (about 85 m). | Framing: three aligned doorways in a row frame the way forward. |
+| Level01 | <img src="Docs/levels/level01.png" width="320"> | A simple first level: a spawn room, a corridor, a yard with low cover, and then one jump across a gap to the goal. | Landmark: a tall orange tower behind the goal that you can see from the start. |
+| Level02 | <img src="Docs/levels/level02.png" width="320"> | The route splits. The left corridor is safe, the right one is shorter but has a gap. Both end in a hall with a side room, then a narrow bridge to the goal. | Breadcrumbs: a trail of coins shows the way. |
+| Level03 | <img src="Docs/levels/level03.png" width="320"> | A narrow corridor gets even narrower at a small door, then opens into a big hall. The goal is on a platform up a ramp. | Pinch and release: the tight door opens into a big space and you can see the goal. |
+| Level04 | <img src="Docs/levels/level04.png" width="320"> | A climb with stairs and two jumps across gaps between platforms. The goal is at the top. | Light and contrast: the floor is dark, each platform has a bright strip and a warm light, and the goal is the brightest. |
+| Level05 | <img src="Docs/levels/level05.png" width="320"> | Everything together: a hall of doors, a courtyard where you pick the cover side or a narrow bridge, then a ramp and a last jump to the goal. | Framing: three doorways in a row point to the way forward. |
 
-Dimensions follow Lecture 03: doorways 2 m × 2.5 m, walls 3 m, corridors about 3 m (the Level03 pinch is 2 m), low cover 1.1 m, steps 0.3 m, ramps 19°, and jump gaps of 2.8 m or less. `Assets/Editor/LevelBuilder.cs` (menu: CS464 → Build Kit + Levels) regenerates the kit, the scenes and the screenshots.
+The sizes follow Lecture 03: doorways at least 1.5 m wide and 2.5 m tall, walls 3 m, steps 0.3 m and jumps of 3 m or less. `Assets/Editor/LevelBuilder.cs` can rebuild the levels from the menu (CS464 > Build Kit + Levels).
 
 ---
 Note: the commit dates in this repository were adjusted as part of the Git practice exercise, as allowed by the instructor.
