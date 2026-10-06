@@ -14,10 +14,10 @@
 <img src="Docs/game1/4.jpg" width="200">
 </p>
 
-1. [M2, M4, M6, M7] · I hit a train and now the guard and his dog are chasing me. The score, coins and top run box are at the top right, and there is an event counter at the top left.
-2. [M3] · A reward screen gives me a bag of coins.
-3. [M1, M2] · Running down the track with the guard right behind me and a train coming in my lane.
-4. [M5, M3] · Using the jetpack. I'm flying over the track and picking up coins from above.
+1. I hit a train, so the guard and his dog started chasing me. One more crash and the run is over. I'm still collecting coins and my score is being multiplied.
+2. After a run the game gave me a bag of coins, which I can spend in the shop.
+3. Running down the track with the guard right behind me. A train is blocking my lane, so I have to switch lanes or jump.
+4. I'm using the jetpack, so I fly above the track and pick up coins from the air instead of dodging trains.
 
 | # | Mechanic | Dynamic | Aesthetic | Bartle type |
 |---|---|---|---|---|
@@ -26,14 +26,14 @@
 | M3 | You collect coins on the track and spend them in the shop on characters, boards and upgrades. | Players go for coins, even in risky spots, and play one more run to afford the next thing. | Expression: coins let you choose how your character looks. | Achiever (acting × world): there is always something to save up for. |
 | M4 | Your score goes up with the distance you run, and it is multiplied by a number that you raise by finishing missions. | Players do the missions that raise the multiplier first so their next run scores more. | Challenge: you beat your old score by playing better, not only longer. | Achiever (acting × world): the number keeps growing. |
 | M5 | Power-ups like the jetpack lift you above the track for a short time. | Players use them to grab lines of coins in the air and skip hard parts of the track. | Sensation: flying over the city feels good. | Explorer (interacting × world): you find out what each power-up does and when it helps. |
-| M6 | A "top run" box shows a score from the leaderboard that you try to pass. | Players push harder when they get close to that score. | Challenge: there is a clear score to beat. | Achiever (acting × world): you are trying to beat a number. |
-| M7 | Event items that you pick up during runs fill a counter and give a reward when it is full. | Players change their route to pick up the items and come back on other days to finish. | Discovery: you want to find out what the event reward is. | Explorer (interacting × world): you go and look for what the event offers. |
+| M6 | The game picks a score from the leaderboard as a target for your run and tells you when you pass it. | Players push harder when they get close to that score. | Challenge: there is a clear score to beat. | Achiever (acting × world): you are trying to beat a number. |
+| M7 | Event items that you pick up during runs fill up a counter, and you get a reward when it is full. | Players change their route to pick up the items and come back on other days to finish. | Discovery: you want to find out what the event reward is. | Explorer (interacting × world): you go and look for what the event offers. |
 
 **Aesthetic profile:** Challenge is the main one (M1, M2, M4, M6) because every few seconds you can lose the run. Expression (M3) and Sensation (M5) come next. They are the reasons I kept playing: new looks for the character and the jetpack.
 
 **Player types**
-- Primary: Achiever (acting × world), because I'm always pushing for a better result: running further, getting more coins and a higher score (M1, M3, M4). That is acting on the game. It is the world axis because what I play against is the game itself, with its obstacles and numbers (M2), not other players.
-- Secondary: Explorer (interacting × world), because power-ups and event items (M5, M7) are things I try out to see how they work. That is interacting with the game, and again it is the world axis because it is all part of the game system.
+- Primary: Achiever (acting × world). I'm acting because I'm always pushing for a better result: running further, getting more coins and a higher score (M1, M3, M4). It is the world axis because what I play against is the game itself, its obstacles and its numbers (M2), not other players.
+- Secondary: Explorer (interacting × world). Power-ups and event items (M5, M7) are things I try out to see how they work, so I'm interacting with the game. It is the world axis again because it is all part of the game system.
 
 ## Game 2 · PUBG Mobile (Team Deathmatch)
 
@@ -48,25 +48,25 @@
 <img src="Docs/game2/3.jpg" width="320">
 </p>
 
-1. [M1, M3, M4, M5, M7] · A Team Deathmatch match. The score and timer are at the top, my gun is at the bottom left, the control buttons are on the right and the minimap is at the top right. My teammates are listed on the left.
-2. [M2, M6] · A kill and a medal popup on screen while we fight around the containers.
-3. [M5, M7] · The big map is open and my squad shows up as numbered markers.
+1. Halfway through a Team Deathmatch match. My team is trying to reach the kill target before the time runs out, and I have to watch my ammo and reload at the right moment.
+2. I got a kill and the game gave me a medal for it. The fighting happens around the containers, so cover matters, and if I die I just respawn and go back in.
+3. I opened the big map to see where my squad is before choosing where to go.
 
 | # | Mechanic | Dynamic | Aesthetic | Bartle type |
 |---|---|---|---|---|
 | M1 | A Team Deathmatch match ends when one team reaches the kill target, or when the time runs out. | Teams fight over the middle instead of hiding, and the losing team takes bigger risks near the end. | Challenge: there is a clear goal and a time limit. | Killer (acting × players): you win by beating the other team. |
 | M2 | When you die you respawn and get back into the fight. | Players push again quickly and take more risks because dying costs very little. | Challenge: you can try bolder moves without a big punishment. | Killer (acting × players): you keep fighting the same enemies. |
 | M3 | Guns have limited ammo in the magazine and you have to reload. | Players hide behind cover to reload and try not to waste shots. | Challenge: managing your ammo can decide a fight. | Achiever (acting × world): you get better at using the gun properly. |
-| M4 | On the touch screen you move with a stick and use buttons to aim, shoot, jump, crouch and lie down. | Players climb on boxes and roofs to get height, and crouch or go prone behind cover. | Sensation: moving and shooting on the screen feels like handling a weapon. | Explorer (interacting × world): you learn what each move can do on the map. |
-| M5 | You play in a squad, so you can see your teammates, chat with them and mark places on the map. | Teammates call out enemies and attack the same spot together. | Fellowship: you win together as a team. | Socializer (interacting × players): you play with other people. |
-| M6 | The game shows medals and banners for things like kill streaks and revenge kills. | Players hunt the person who killed them to get a revenge medal and try to keep their streak going. | Challenge: a medal shows that you did something hard. | Killer (acting × players): the reward is for beating a specific player. |
-| M7 | A minimap and a full map show where your teammates are. | Players check the map before picking a route and meet up with their squad. | Discovery: reading the map shows you where the fight is. | Explorer (interacting × world): you work out how the map is laid out. |
+| M4 | A shot to the head does more damage than a shot to the body. | Players aim for the head and keep moving so they are harder to hit. | Challenge: good aim is rewarded and bad aim gets punished. | Achiever (acting × world): you work on your aim to get better. |
+| M5 | You play in a squad, so you can talk to your teammates and mark places for them. | Teammates call out enemies and attack the same spot together. | Fellowship: you win together as a team. | Socializer (interacting × players): you play with other people. |
+| M6 | The game gives medals for things like kill streaks and revenge kills. | Players hunt the person who killed them to get a revenge medal and try to keep their streak going. | Challenge: a medal shows that you did something hard. | Killer (acting × players): the reward is for beating a specific player. |
+| M7 | Your teammates' positions are shared with the whole squad on the map. | Players check where their squad is before picking a route and meet up with them. | Discovery: reading the map shows you where the fight is. | Explorer (interacting × world): you work out how the map is laid out. |
 
-**Aesthetic profile:** Challenge is the biggest one (M1, M2, M3, M6) because every fight can be lost and the match is always close. Fellowship (M5) and Discovery (M7) come next: you plan with your squad and read the map before you push.
+**Aesthetic profile:** Challenge is the biggest one (M1, M2, M3, M4, M6) because every fight can be lost and the match is always close. Fellowship (M5) and Discovery (M7) come next: you plan with your squad and read the map before you push.
 
 **Player types**
-- Primary: Killer (acting × players), because I'm doing something to the other side: shooting and winning fights (M1, M2). That is acting. It is the players axis because what I play against is the other team, not the game's system. The medals (M6) are also about beating a person.
-- Secondary: Socializer (interacting × players), because I play together with my squad, using chat, pings and the team list (M5). That is interacting, and it is the players axis because the fun comes from the other people. I also use the map (M7) to meet up with them.
+- Primary: Killer (acting × players). I'm acting because I'm doing something to the other side: shooting and winning fights (M1, M2). It is the players axis because what I play against is the other team, not the game's system. The medals (M6) are also about beating a person.
+- Secondary: Socializer (interacting × players). I play together with my squad, talking and marking places for them (M5), so I'm interacting. It is the players axis because the fun comes from the other people. I also use the map (M7) to meet up with them.
 
 ## Level blockouts
 
