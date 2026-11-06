@@ -1,6 +1,6 @@
 # CS464 Assignment 03, Mohsin Raza Ojla, BSSE23040
 
-- **Video (about 2 minutes):** VIDEO_LINK_HERE
+- **Video (about 2 minutes):** https://drive.google.com/file/d/15wcwOg7VfXxFnnog9IqRkRgJNdRsrY_P/view?usp=sharing
 - **Started from:** my Assignment 02 repo, https://github.com/bsse23040/CS464-A2-BSSE23040. I copied it with its history, so the five levels, the controller and the camera are the same. Everything new in this assignment is added on top.
 - **Controls:** `W A S D` or the arrow keys to move, `Space` to jump. They use the Input System actions `Move` and `Jump`.
 - **To win a level:** collect the coins shown at the top left (7, 12, 6, 7 and 9 in levels 1 to 5) and then stand on the green goal. If you have too few coins, the goal tells you how many are missing. You have 3 lives with 3 hearts each, and falling off the level costs a life.
