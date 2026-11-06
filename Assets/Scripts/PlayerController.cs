@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody rb;
     Transform cam;
+    float speedMultiplier = 1f;                        // 1 normally, higher while a speed power-up runs
+    Coroutine boost;
+    float boostEnds;                                   // Time.time when the running boost ends
+    float noControlUntil;                              // steering waits until then, after a knockback
     InputAction moveAction, jumpAction;
     Vector3 move;                                      // built in Update, used in FixedUpdate
     bool isGrounded, jumpQueued;
@@ -101,8 +105,10 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(feet.position, checkRadius, groundMask, QueryTriggerInteraction.Ignore);
 
-        // a velocity is in metres per second: no deltaTime here, the physics step does that
-        rb.linearVelocity = new Vector3(move.x * speed, rb.linearVelocity.y, move.z * speed);
+        // a velocity is in metres per second: no deltaTime here, the physics step does that.
+        // While a knockback is flying we do not steer, or this line would wipe the push on the next step.
+        if (Time.time >= noControlUntil)
+            rb.linearVelocity = new Vector3(move.x * speed * speedMultiplier, rb.linearVelocity.y, move.z * speed * speedMultiplier);
 
         if (jumpQueued)
         {
@@ -119,6 +125,36 @@ public class PlayerController : MonoBehaviour
         if (rb.linearVelocity.y < 0f)
             rb.AddForce(Physics.gravity * (fallMultiplier - 1f), ForceMode.Acceleration);
     }
+
+    // A hit throws us clear: zero the sideways speed first, so a push at a run goes as far as one standing still,
+    // then one impulse, and no steering for a moment so the controller cannot cancel it.
+    public void Knockback(Vector3 push, float seconds)
+    {
+        Vector3 v = rb.linearVelocity;
+        rb.linearVelocity = new Vector3(0f, v.y, 0f);
+        rb.AddForce(push, ForceMode.Impulse);
+        noControlUntil = Time.time + seconds;
+    }
+
+    // The speed power-up. The pickup only calls this: the timer has to live here on the player,
+    // because the pickup is destroyed the moment it is touched.
+    // A second pickup while one is running refreshes it: the old timer is stopped and a new one starts.
+    public void BoostSpeed(float multiplier, float seconds)
+    {
+        if (boost != null) StopCoroutine(boost);
+        boost = StartCoroutine(Boost(multiplier, seconds));
+    }
+
+    IEnumerator Boost(float multiplier, float seconds)
+    {
+        speedMultiplier = multiplier;
+        boostEnds = Time.time + seconds;
+        yield return new WaitForSeconds(seconds);
+        speedMultiplier = 1f;
+        boost = null;
+    }
+
+    public float BoostLeft => boost != null ? Mathf.Max(0f, boostEnds - Time.time) : 0f;   // for the HUD
 
     void StartSquash(float impact)
     {

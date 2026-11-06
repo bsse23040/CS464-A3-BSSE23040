@@ -1,43 +1,49 @@
-# CS464 Assignment 02 · Mohsin Raza Ojla · BSSE23040
+# CS464 Assignment 03, Mohsin Raza Ojla, BSSE23040
 
-- **Video:** https://drive.google.com/file/d/1wFWJrAfPcZm4NiKRbPqXCI27l8Ec0xOo/view?usp=sharing
-- **Input:** The Input System package. `PlayerController` reads the project-wide actions `Move` and `Jump` from `InputSystem.actions` in `Update`. Active Input Handling is the template's default (Input System Package (New)), saved in `ProjectSettings`.
-- **Ground check:** `Physics.CheckSphere` on a `Ground` layer. The sphere is a bit smaller than the capsule and the player is not on that layer, so it never finds the player's own capsule or a wall. Select the Player to see the sphere as a gizmo: green on ground, red in the air.
-- **Camera:** exact smoothing with `1 − e^(−k·dt)` (k = 5) in `LateUpdate`, plus a look-ahead of 0.35 s.
-- **Juice:** a squash when I land, shaped by `Ease.OutBack` and run by a coroutine. It starts on a landing after more than 0.1 s in the air.
+- **Video (about 2 minutes):** https://drive.google.com/file/d/15wcwOg7VfXxFnnog9IqRkRgJNdRsrY_P/view?usp=sharing
+- **Started from:** my Assignment 02 repo, https://github.com/bsse23040/CS464-A2-BSSE23040. I copied it with its history, so the five levels, the controller and the camera are the same. Everything new in this assignment is added on top.
+- **Controls:** `W A S D` or the arrow keys to move, `Space` to jump. They use the Input System actions `Move` and `Jump`.
+- **To win a level:** collect the coins shown at the top left (7, 12, 6, 7 and 9 in levels 1 to 5) and then stand on the green goal. If you have too few coins, the goal tells you how many are missing. You have 3 lives with 3 hearts each, and falling off the level costs a life.
 
-## Tuning
-
-| Setting | Value | Why this number |
-|---|---|---|
-| Speed | 5 m/s | Level05 is about 85 m long and takes about 17 s at this speed, which I measured at 16.9 s. That is quick but not rushed. It is slow enough to stay on the 1.5 m wide bridge in Level02 and to pass the 2 m doorways, and the jump carries far enough at this speed (see the jump numbers below). |
-| Jump height | 1.8 m | It clears the 1.1 m low cover and the 1.2 m crates. At this speed the jump carries 5.1 m, which is a lot more than my widest gap of 2.8 m. |
-| Time to apex | 0.61 s | I don't set this one. It follows from the height: v = √(2 · 9.81 · 1.8) = 5.94 m/s, and 5.94 ÷ 9.81 = 0.61 s. That is about 36 frames at 60 fps, long enough to see and steer. |
-| Fall multiplier | 2.2× | The fall takes 0.41 s instead of 0.61 s, so the jump feels snappy and not floaty. The top of the jump stays at 1.8 m. |
-| Coyote time | 0.1 s | At 5 m/s that is 0.5 m past the edge, which is enough to forgive a late press at the edge of the gaps in Level01 and Level04. |
-| Jump buffer | 0.12 s | About 7 frames at 60 fps. I land at about 8.8 m/s, so a press up to about 0.9 m above the ground is still remembered. |
-| Camera smoothing | k = 5 | The camera trails by speed ÷ k = 5 ÷ 5 = 1 m while I run, and it closes 63% of a gap in 0.2 s (1 ÷ k). It keeps up without feeling stiff. |
-| Look-ahead | 0.35 s | At 5 m/s the camera aims 1.75 m ahead of me, so the next gap or doorway is in view before I get to it. |
-
-## Four answers
-
-1. **The jump, in numbers.** The jump height is 1.8 m and gravity is 9.81, so the launch speed is v = √(2 · 9.81 · 1.8) = 5.94 m/s. The Rigidbody weighs 1 kg, so the impulse (jumpForce) is m · v = 5.94. Going up takes 5.94 ÷ 9.81 = 0.61 s. Coming down with the fall multiplier of 2.2 takes √(2 · 1.8 ÷ (9.81 · 2.2)) = 0.41 s. The whole jump is about 1.01 s, so at 5 m/s one jump carries me about 5.1 m. My widest gap is 2.8 m (Level05), so it clears with about 2.3 m to spare. Unity's 0.02 s steps make the top about 3% lower (around 1.74 m), which does not change this.
-2. **Update and FixedUpdate.** In `Update` the script reads Move and Jump, turns the move into a direction relative to the camera, clamps it to length 1, remembers when the jump was pressed and when I last stood on the ground, checks the coyote and buffer windows, queues the jump, and works out when a landing should squash. In `FixedUpdate` it does the ground check, sets `rb.linearVelocity` from the move and keeps the y speed, applies the queued jump once (it zeroes the vertical speed first, then adds the impulse) and adds the extra gravity while falling. If I swapped them, a jump press would be read in `FixedUpdate`, and a press only lasts one frame, so at 144 fps about two presses in three would be lost. Applying the jump in `Update` could add the impulse on several frames before the physics step runs, and the fall gravity would depend on the frame rate.
-3. **Vector3.Dot.** In `PlayerController`: `fallSpeed = Mathf.Max(fallSpeed, Vector3.Dot(rb.linearVelocity, Vector3.down));`. The dot product with `Vector3.down` is positive while I move down and negative while I move up, so it is how fast I am falling. I use it to see how hard a landing is. A small drop like a stair step (under 3 m/s) does not squash, and a harder landing squashes more.
-4. **The juice.** It is a squash on landing. The body is squashed to between 0.85 and 0.7 of its height, depending on how hard the landing was, and the width grows to keep the volume the same (at 0.7 the width is about 1.2). It then eases back to normal with `Ease.OutBack`, which goes a little past 1 and settles, so it springs back. It lasts 0.35 s, which is 21 frames at 60 fps. That is long enough to see and short enough to be over before the next jump. It starts only after more than 0.1 s in the air, a running one is stopped first, and it ends exactly at rest.
+Made and tested in Unity 6000.6.2f1.
 
 ## Levels
 
-| Level | What the controller must do there | What I changed for this jump |
+| Level | Screenshot | New idea | Combined with |
+|---|---|---|---|
+| Level01 | <img src="Docs/a3/level01.png" width="320"> | Coins, the goal and a bounce pad that throws you onto a ledge with two coins. | Nothing hurts yet. The only danger is the 2.5 m gap before the goal, with a checkpoint in front of it. |
+| Level02 | <img src="Docs/a3/level02.png" width="320"> | Spikes, which cost one heart at a time. | A coin trail that goes over spikes, and a reward room with spikes in the doorway that you have to jump. |
+| Level03 | <img src="Docs/a3/level03.png" width="320"> | A guard that patrols, chases when you come close and gives up when you get away. | Spikes right beside its route, so dodging the guard can push you into them. |
+| Level04 | <img src="Docs/a3/level04.png" width="320"> | The crusher, which warns before it hits. You meet it alone on the first platform, with a coin on it. | A guard that walks next to a second crusher on the last platform, after the two 2.5 m jumps and the stairs. |
+| Level05 | <img src="Docs/a3/level05.png" width="320"> | Two speed pickups 6 m apart, so you grab the second one while the first is still running. | Everything from before: a ping-pong guard, spikes, a crusher across the ramp room, the narrow bridge and the 2.8 m jump at the end. |
+
+## The numbers
+
+| Number | Value | Why |
 |---|---|---|
-| Level01 | Run through the room, the 3 m corridor and the yard around the low cover, then jump a 2.5 m gap to the goal. | Nothing. The 2.5 m gap is well under the 5.1 m the jump carries. |
-| Level02 | Take the safe left corridor or the right one with a 2.5 m gap, then cross a 1.5 m wide bridge that is 12 m long. | Nothing. The bridge is wide enough for the 1 m capsule, and the gap is under the jump. |
-| Level03 | Go through the 3 m corridor and a 2 m wide squeeze, then walk up a 19° ramp that is 2.4 m high. | Nothing. No jump is needed, and the controller walks up the ramp fine. |
-| Level04 | Climb two flights of 0.3 m steps (3 m high each), and jump two 2.5 m gaps between platforms. | Nothing. The capsule climbs the 0.3 m steps without extra code, and both gaps are under the jump. |
-| Level05 | Pass three 2 m doorways in a row, walk up a 19° ramp, and make the last jump over the widest gap, 2.8 m, onto the goal block. | Nothing. 2.8 m is the widest gap and the jump still clears it by about 2.3 m. |
+| Patrol speed | 2 m/s | The player runs at 5 m/s, so the guard walks at 40% of that. You have time to see its route and walk past. |
+| Chase range | 6 m, gives up at 9 m. Chase speed 3.5 m/s | One jump carries about 5 m, so with 6 m you cannot jump past a guard without it noticing. It gives up 3 m further out so it does not switch on and off at one edge. 3.5 m/s is 70% of my run speed, so I can always outrun it. |
+| Knockback | 8 with `ForceMode.Impulse` (the crusher uses 10), and no steering for 0.25 s | On the 1 kg player an impulse of 8 gives 8 m/s, and for 0.25 s that is about 2 m. I measured 1.9 m in play, which gets me out of the 2 m spike patch. |
+| I-frames | 1 s | After a hit, the knockback plus a short walk gets you out of a 2 m patch in under a second. That is long enough to get clear, and standing in spikes still costs a heart every second. |
+| Power-up duration | 5 s at x1.6 speed (8 m/s) | That is about 40 m of running. It covers the pickups 6 m apart in level 5 but not the whole level, so it helps without becoming the normal speed. |
+| Crusher warning | 0.7 s (rest 2.4 s, strike 0.4 s) | Reaction time is about 0.25 s and you also have to move, so 0.7 s is fair. 0.2 s would feel unfair. |
+| Bounce pad | 9 m/s up with `ForceMode.VelocityChange` | The top of the jump is v squared over 2g, which is 4.1 m. The ledge is 3 m high, so there is some room. |
+| Respawn | 0.6 s delay, 1.5 s protection | The delay lets the knockback of the killing hit finish before the new life starts, and the protection stops the spawn point from killing twice. |
 
-## Notes
+## Short answers
 
-- Made and tested in Unity 6000.6.2f1. The levels are the five from Assignment 01. I only put every level piece on the `Ground` layer and added the Player and Camera prefabs to each scene.
-- `Assets/Scripts/RouteAutopilot.cs` and `Assets/Editor/LevelRunner.cs` are a test driver. It presses the real Move and Jump inputs on a virtual gamepad and walks each level, so I could check that every level plays from spawn to goal (menu: CS464 > Test All Levels). It is never in a scene.
-- On the first open, Unity itself printed one error from its own Search index (`SearchDatabase`). It does not come from my scripts.
+**1. Why does a trigger need a Rigidbody on at least one of the two objects?**
+
+Unity only reports a trigger when at least one of the two colliders has a Rigidbody. Two colliders without one are both static, so they are never checked against each other and nothing happens. In my game the player has the Rigidbody, so the coins, spikes, goal and checkpoints work even though they have none. The guards move by script, so I gave them a kinematic Rigidbody, because a collider that moves should have one.
+
+**2. Which ForceMode do your knockback and your Part A force use, and why each?**
+
+The knockback uses `Impulse`. It is one kick and I want the mass to count: 8 on a 1 kg player is 8 m/s. It is called once, from `OnTriggerStay`, only when the hit lands. The bounce pad uses `VelocityChange`, so the height depends only on the number and not on the mass (9 m/s gives 4.1 m). It kicks once from `OnTriggerEnter`. My controller sets the sideways speed every physics step, so the pad only pushes straight up, and the knockback turns off the steering for 0.25 s so the push is not wiped.
+
+**3. What does your code do when a second power-up is picked up while one is running?**
+
+It refreshes it. `BoostSpeed` stops the running coroutine and starts a new one, so the 5 seconds start again and the speed does not stack. Two pickups 3 seconds apart would end at 8 seconds. In level 5 the second pickup takes the boost from about 2.2 seconds left back up to 5.
+
+**4. Why can `==` fail as an arrival check, and when does it work?**
+
+`Vector3 ==` only says true when the positions are within about 0.00001 m. If I move an object by hand with steps of about 3 cm per frame, it never lands that close, so it overshoots, turns round and never arrives. It does work right after `Vector3.MoveTowards`, because that lands exactly on the target when it is within one step. My guard checks arrival by distance anyway, with `arriveDistance` 0.1 m, which is bigger than one step (2 m/s is about 3 cm a frame), so it also works for the chase and the walk back.
